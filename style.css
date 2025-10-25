@@ -1,0 +1,450 @@
+/* ============================================================
+   FANSVOLEY · Hoja de estilos general (versión sin fuentes externas)
+   ------------------------------------------------------------
+   Incluye diseño para:
+   - Landing (index.html)
+   - Página principal (producto.html)
+   - Buscador (competiciones.html)
+   ============================================================ */
+
+
+/* ============================================================
+   1. Variables globales: colores, tamaños y sombras
+   ============================================================ */
+:root{
+  --bg:#ffffff;              /* Fondo general */
+  --panel:#ffffff;           /* Fondo de secciones */
+  --panel-2:#f5f8ff;         /* Fondo alternativo (ligeramente azulado) */
+  --text:#0e1b3d;            /* Texto principal */
+  --muted:#5a6b8a;           /* Texto secundario */
+  --brand:#0d47a1;           /* Azul marca */
+  --brand-2:#1976d2;         /* Azul más claro */
+  --line:#e4ecff;            /* Bordes */
+  --shadow:0 10px 25px rgba(13,71,161,.15);  /* Sombra estándar */
+  --radius:16px;             /* Radio de borde */
+
+  /* Tamaños de fuente fluidos */
+  --fs-base:clamp(15px,1.2vw + 0.5rem,18px);
+  --fs-sm:clamp(.9rem,.25vw + .85rem,1rem);
+  --fs-md:clamp(1rem,.35vw + .95rem,1.125rem);
+  --fs-lg:clamp(1.1rem,.6vw + 1rem,1.35rem);
+  --fs-xl:clamp(1.3rem,1vw + 1rem,1.75rem);
+}
+
+
+/* ============================================================
+   2. Reset y tipografía base
+   ============================================================ */
+*{ box-sizing:border-box; }               /* Incluye padding/borde en el ancho total */
+html,body{ height:100%; }
+body{
+  margin:0;
+  color:var(--text);
+  background:var(--bg);
+
+  /* Fuente del sistema: rápida y sin descargas */
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+               Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  font-size: var(--fs-base);
+  line-height:1.5;
+}
+
+
+/* ============================================================
+   3. Utilidades generales
+   ============================================================ */
+.container{
+  width:min(1200px,92%);       /* Anchura máxima adaptable */
+  margin-inline:auto;          /* Centrada horizontalmente */
+}
+.sr-only{                      /* Texto oculto visualmente pero accesible */
+  position:absolute; width:1px; height:1px; padding:0; margin:-1px;
+  overflow:hidden; clip:rect(0,0,0,0); border:0;
+}
+.h5{ font-size:var(--fs-lg); margin:0; } /* Título secundario */
+
+a{ transition: color .2s ease, background-color .2s ease, transform .15s ease; }
+a:visited{ color:#1b4fa8; }               /* Color al visitar */
+:focus-visible{ outline:3px solid #8fbaff; outline-offset:3px; } /* Focus accesible */
+
+
+/* ============================================================
+   4. Cabecera (header) reutilizable
+   ============================================================ */
+.site-header{
+  position:sticky; top:0; z-index:1000;
+  background:linear-gradient(90deg,var(--brand),var(--brand-2));
+  color:#fff;
+  box-shadow:0 4px 14px rgba(13,71,161,.25);
+}
+.header-inner{
+  display:flex; align-items:center; gap:16px;
+  padding:14px 0;
+}
+.logo{
+  display:flex; align-items:center; gap:10px;
+  color:#fff; text-decoration:none;
+}
+.logo-img{ width:32px; height:auto; }
+
+/* Estilo del texto del logo (sustituye a Bebas Neue) */
+.logo-title{
+  font-family: inherit;           /* Usa la misma fuente del sistema */
+  text-transform: uppercase;      /* Mayúsculas */
+  letter-spacing: .08em;          /* Espaciado tipo “display” */
+  font-weight: 800;               /* Más grosor para destacar */
+  font-size:clamp(1.4rem,.8vw + 1.2rem,2rem);
+  line-height:1;
+}
+
+/* Botón para menú móvil */
+.nav-toggle{
+  margin-left:auto;
+  display:none;
+  background:transparent;
+  border:1px solid #ffffff66;
+  color:#fff;
+  padding:.5rem .7rem;
+  border-radius:10px;
+  cursor:pointer;
+}
+
+/* Navegación principal */
+.main-nav ul{
+  list-style:none;
+  margin:0; padding:0;
+  display:flex; gap:6px;
+}
+.main-nav a{
+  display:block;
+  padding:.55rem .9rem;
+  text-decoration:none;
+  color:#fff;
+  border-radius:12px;
+}
+.main-nav a:hover{ background:#ffffff2a; transform:translateY(-1px); }
+.main-nav a.is-active{ background:#ffffff33; }
+
+
+/* ============================================================
+   5. Pie de página (footer)
+   ============================================================ */
+.site-footer{
+  color:var(--muted);
+  border-top:1px solid var(--line);
+  background:#fafcff;
+  padding:18px 0 40px;
+  text-align:center;
+}
+
+
+/* ============================================================
+   6. Contenedor principal
+   ============================================================ */
+.main-stack{
+  display:grid;
+  gap:20px;
+  padding:24px 0 36px;
+}
+
+
+/* ============================================================
+   7. LANDING PAGE (index.html)
+   ============================================================ */
+.landing-body{
+  background:linear-gradient(180deg,var(--brand),var(--brand-2));
+  color:#fff;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+/* Cabecera de la landing */
+.landing-header{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:20px;
+}
+
+/* Logo en landing */
+.logo-landing{
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  gap:12px;
+}
+.logo-landing .logo-img{ width:48px; height:auto; }
+.logo-landing .logo-title{
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  font-weight:800;
+  font-size:clamp(1.6rem,1vw + 1.4rem,2.2rem);
+}
+
+/* Cuerpo central de la landing */
+.landing-main{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:24px;
+  padding:20px;
+  text-align:center;
+}
+.landing-image{
+  width:min(640px,92%);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+}
+
+/* Botones de acceso */
+.auth-options{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+.btn-primary,
+.btn-secondary{
+  border-radius:var(--radius);
+  padding:.75rem 1.25rem;
+  font-weight:700;
+  text-decoration:none;
+}
+
+/* Botón blanco */
+.btn-primary{
+  background:#fff;
+  color:var(--brand);
+  border:2px solid #fff;
+}
+.btn-primary:hover{ background:#f5f8ff; }
+
+/* Botón transparente */
+.btn-secondary{
+  background:transparent;
+  color:#fff;
+  border:2px solid #fff;
+}
+.btn-secondary:hover{ background:#ffffff22; }
+
+.landing-footer{
+  text-align:center;
+  padding:14px;
+  font-size:var(--fs-sm);
+  opacity:.9;
+}
+
+
+/* ============================================================
+   8. PÁGINA PRINCIPAL (producto.html — grid de secciones)
+   ============================================================ */
+
+/* Cabecera de bloque */
+.head-gap{
+  background:var(--panel-2);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  margin-bottom:14px;
+  padding:14px 16px;
+}
+
+/* Grid de tarjetas */
+.sections-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:16px;
+}
+
+/* Escritorio: 3 columnas */
+@media (min-width:1200px){
+  .sections-grid{
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+    max-width:1100px;
+    margin-inline:auto;
+  }
+}
+
+/* Tarjeta individual */
+.section-card{
+  position:relative;
+  display:block;
+  overflow:hidden;
+  border-radius:16px;
+  border:1px solid var(--line);
+  background:#fff;
+  box-shadow:var(--shadow);
+  text-decoration:none;
+  aspect-ratio:16/9;
+  min-height:160px;
+}
+.section-card:hover{
+  transform:translateY(-2px);
+  border-color:#bcd6ff;
+  transition:.2s ease;
+}
+.section-img{
+  position:absolute; inset:0;
+  width:100%; height:100%;
+  object-fit:cover;
+  transition:transform .3s ease;
+}
+.section-card:hover .section-img{ transform:scale(1.05); }
+
+/* Oscurecido inferior para legibilidad */
+.section-card::after{
+  content:"";
+  position:absolute; inset:0;
+  background:linear-gradient(180deg,rgba(0,0,0,0)40%,rgba(0,0,0,.55)100%);
+}
+
+/* Título visible */
+.section-title{
+  position:absolute;
+  left:12px; bottom:10px;
+  z-index:1;
+  color:#fff;
+  font-weight:700;
+  text-shadow:0 2px 6px rgba(0,0,0,.45);
+  background:rgba(0,0,0,.4);
+  padding:.25rem .5rem;
+  border-radius:10px;
+}
+
+/* ===== Noticias ===== */
+.card{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  overflow:hidden;
+}
+.card-header{
+  padding:14px 16px;
+  border-bottom:1px solid var(--line);
+  background:var(--panel-2);
+}
+.news-list{
+  list-style:none;
+  margin:0; padding:16px;
+  display:grid; gap:10px;
+}
+.news-list a{
+  display:flex; justify-content:space-between; gap:16px;
+  text-decoration:none; color:var(--text);
+  padding:.6rem .8rem;
+  border-radius:12px;
+  border:1px solid var(--line);
+  background:#fff;
+  transition:background .2s;
+}
+.news-list a:hover{ background:#f1f5ff; }
+.news-title{ max-width:70%; }
+.news-time{ color:var(--muted); }
+.link-more{
+  display:inline-block;
+  margin:12px 16px 16px;
+  color:var(--brand-2);
+  text-decoration:none;
+}
+
+/* ===== Publicidad ===== */
+.ads.single{ display:flex; justify-content:center; padding:16px; }
+.ad-box{
+  display:block;
+  width:100%; max-width:320px;
+  border-radius:14px;
+  border:1px solid var(--line);
+  overflow:hidden;
+  background:#fff;
+  box-shadow:var(--shadow);
+}
+.ad-img{ display:block; width:100%; height:auto; }
+
+
+/* ============================================================
+   9. COMPETICIONES (buscador)
+   ============================================================ */
+.search-section{
+  display:flex;
+  gap:1rem;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:center;
+}
+.search-input{
+  padding:.6rem 1rem;
+  border-radius:var(--radius);
+  border:1px solid var(--line);
+  flex:1 1 260px;
+  max-width:420px;
+}
+.results-section, .ranking-section{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  padding:1rem;
+}
+.results-section h3, .ranking-section h3{
+  margin:.25rem 0 .5rem;
+  color:var(--brand);
+}
+.results-table{
+  width:100%;
+  border-collapse:collapse;
+  margin-top:.5rem;
+  background:#fff;
+  border-radius:var(--radius);
+  overflow:hidden;
+}
+.results-table th, .results-table td{
+  padding:.75rem 1rem;
+  border-bottom:1px solid var(--line);
+  text-align:left;
+  font-size:var(--fs-sm);
+}
+.results-table th{
+  background:var(--panel-2);
+  color:var(--brand);
+}
+.results-table tr:last-child td{ border-bottom:none; }
+
+
+/* ============================================================
+   10. Responsive
+   ============================================================ */
+@media (max-width:900px){
+  .sections-grid{ grid-template-columns:repeat(2,1fr); } /* 2 columnas en tablet */
+}
+@media (max-width:640px){
+  .nav-toggle{ display:block; }
+  .main-nav{
+    position:absolute; inset:60px 0 auto 0;
+    background:linear-gradient(90deg,var(--brand),var(--brand-2));
+    display:none;
+    border-bottom:1px solid #ffffff44;
+  }
+  .main-nav.open{ display:block; }
+  .main-nav ul{ flex-direction:column; padding:10px; }
+  .sections-grid{ grid-template-columns:1fr; } /* 1 columna en móvil */
+}
+
+
+/* ============================================================
+   11. Accesibilidad: reducir animaciones
+   ============================================================ */
+@media (prefers-reduced-motion:reduce){
+  *{ animation:none!important; transition:none!important; }
+}
+
+
+
+
+
+
