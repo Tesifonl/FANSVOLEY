@@ -1,14 +1,4 @@
 /* ============================================================
-   FANSVOLEY · Hoja de estilos general (versión sin fuentes externas)
-   ------------------------------------------------------------
-   Incluye diseño para:
-   - Landing (index.html)
-   - Página principal (producto.html)
-   - Buscador (competiciones.html)
-   ============================================================ */
-
-
-/* ============================================================
    1. Variables globales: colores, tamaños y sombras
    ============================================================ */
 :root{
@@ -33,7 +23,7 @@
 
 
 /* ============================================================
-   2. Reset y tipografía base
+   2. Tipografía base
    ============================================================ */
 *{ box-sizing:border-box; }               /* Incluye padding/borde en el ancho total */
 html,body{ height:100%; }
@@ -42,7 +32,7 @@ body{
   color:var(--text);
   background:var(--bg);
 
-  /* Fuente del sistema: rápida y sin descargas */
+  /* Fuente */
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
                Arial, "Noto Sans", "Liberation Sans", sans-serif;
   font-size: var(--fs-base);
@@ -69,7 +59,7 @@ a:visited{ color:#1b4fa8; }               /* Color al visitar */
 
 
 /* ============================================================
-   4. Cabecera (header) reutilizable
+   4. Cabecera (header) 
    ============================================================ */
 .site-header{
   position:sticky; top:0; z-index:1000;
@@ -149,7 +139,7 @@ a:visited{ color:#1b4fa8; }               /* Color al visitar */
 
 
 /* ============================================================
-   7. LANDING PAGE (index.html)
+   7. PAGINA LANDING 
    ============================================================ */
 .landing-body{
   background:linear-gradient(180deg,var(--brand),var(--brand-2));
@@ -240,7 +230,7 @@ a:visited{ color:#1b4fa8; }               /* Color al visitar */
 
 
 /* ============================================================
-   8. PÁGINA PRINCIPAL (producto.html — grid de secciones)
+   8. PÁGINA PRODUCTO
    ============================================================ */
 
 /* Cabecera de bloque */
@@ -368,7 +358,7 @@ a:visited{ color:#1b4fa8; }               /* Color al visitar */
 
 
 /* ============================================================
-   9. COMPETICIONES (buscador)
+   9. PAGINA BUSCADOR
    ============================================================ */
 .search-section{
   display:flex;

@@ -1,13 +1,6 @@
-/* ============================================================
-   FANSVOLEY · Hoja de estilos MODO OSCURO (styledark.css)
-   ------------------------------------------------------------
-   Estructura idéntica a style.css
-   Se modifican únicamente los valores de color y contraste
-   ============================================================ */
-
 
 /* ============================================================
-   1. Variables globales (paleta oscura con contraste alto)
+   1. Variables globales 
    ============================================================ */
 :root{
   /* Colores principales */
@@ -32,7 +25,7 @@
 
 
 /* ============================================================
-   2. Reset y tipografía base
+   2. Tipografía base
    ============================================================ */
 *{ box-sizing:border-box; }
 html,body{ height:100%; }
@@ -126,7 +119,7 @@ a:visited{ color:#93c5fd; } /* azul claro legible */
 
 
 /* ============================================================
-   7. Landing Page (index.html)
+   7. PÁGINA LANDING
    ============================================================ */
 .landing-body{
   background:linear-gradient(180deg,#0d253f,#103b65);
@@ -187,7 +180,7 @@ a:visited{ color:#93c5fd; } /* azul claro legible */
 
 
 /* ============================================================
-   8. Página principal (producto.html)
+   8. PÁGINA PRODUCTO
    ============================================================ */
 .head-gap{
   background:var(--panel-2);
@@ -273,7 +266,7 @@ a:visited{ color:#93c5fd; } /* azul claro legible */
 
 
 /* ============================================================
-   9. COMPETICIONES
+   9. PAGINA BUSCADOR
    ============================================================ */
 .search-section{
   display:flex; gap:1rem; flex-wrap:wrap; align-items:center; justify-content:center;
