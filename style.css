@@ -62,10 +62,8 @@ a:visited{ color:#1b4fa8; }               /* Color al visitar */
    4. Cabecera (header) 
    ============================================================ */
 .site-header{
-  position:sticky; top:0; z-index:1000;
   background:#0d47a1;
   color:#fff;
-  box-shadow:0 4px 14px rgba(13,71,161,.25);
 }
 .header-inner{
   display:flex; align-items:center; gap:16px;
@@ -436,12 +434,6 @@ a:visited{ color:#1b4fa8; }               /* Color al visitar */
 }
 
 
-/* ============================================================
-   11. Accesibilidad: reducir animaciones
-   ============================================================ */
-@media (prefers-reduced-motion:reduce){
-  *{ animation:none!important; transition:none!important; }
-}
 
 
 

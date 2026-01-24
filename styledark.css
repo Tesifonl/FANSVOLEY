@@ -11,6 +11,8 @@
   --muted:#a8b3cf;          /* Texto secundario */
   --brand:#1e88e5;          /* Azul principal más luminoso */
   --brand-2:#60a5fa;        /* Azul claro de acento */
+  --brand-3: #99e800ff;     /* Azul principal más luminoso */
+  --brand-4:#fce800ff;   /* Azul claro de acento */
   --line:#24324a;           /* Bordes visibles pero suaves */
   --shadow:0 10px 25px rgba(0,0,0,.45);
   --radius:16px;
@@ -55,10 +57,8 @@ a:visited{ color:#93c5fd; } /* azul claro legible */
    4. Header (cabecera)
    ============================================================ */
 .site-header{
-  position:sticky; top:0; z-index:1000;
-  background:linear-gradient(90deg,var(--brand),var(--brand-2));
+  background:orange;
   color:#fff;
-  box-shadow:0 4px 14px rgba(0,0,0,.5);
 }
 .header-inner{ display:flex; align-items:center; gap:16px; padding:14px 0; }
 .logo{ display:flex; align-items:center; gap:10px; color:#fff; text-decoration:none; }
@@ -69,6 +69,7 @@ a:visited{ color:#93c5fd; } /* azul claro legible */
   font-weight:800;
   font-size:clamp(1.4rem,.8vw + 1.2rem,2rem);
   line-height:1;
+  color:white;
 }
 
 /* Botón menú móvil */
