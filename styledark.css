@@ -57,12 +57,12 @@ a:visited{ color:#93c5fd; } /* azul claro legible */
    4. Header (cabecera)
    ============================================================ */
 .site-header{
-  background:orange;
+  background:#ffa500;
   color:#fff;
 }
 .header-inner{ display:flex; align-items:center; gap:16px; padding:14px 0; }
 .logo{ display:flex; align-items:center; gap:10px; color:#fff; text-decoration:none; }
-.logo-img{ width:32px; height:auto; }
+.logo-img{ width:40px; height:auto; }
 .logo-title{
   text-transform:uppercase;
   letter-spacing:.08em;
