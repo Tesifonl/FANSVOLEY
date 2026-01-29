@@ -462,6 +462,95 @@ a:visited{ color:#1b4fa8; }               /* Color al visitar */
 }
 
 
+/* =========================
+   HERO – Landing
+   ========================= */
+
+.hero{
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px;
+
+  background-image: url("imagen/hero-voley-pixelado.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  overflow: hidden;
+}
+
+/* Desvanecimiento a negro (CSS puro) */
+.hero::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0,0,0,0.9) 0%,
+    rgba(0,0,0,0.55) 45%,
+    rgba(0,0,0,0.0) 75%
+  );
+  pointer-events: none;
+}
+
+/* =========================
+   Contenido del hero
+   ========================= */
+
+.hero-content{
+  position: relative;              /* para quedar sobre el degradado */
+  max-width: 720px;
+  width: 100%;
+
+  padding: 40px;
+
+  background: rgba(0,0,0,0.35);    /* mejora legibilidad */
+  border-radius: 20px;
+
+  color: #ffffff;
+  text-align: center;
+}
+
+
+.hero-title{
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.hero-text{
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.hero-credit{
+  display:block;
+  margin-top:16px;
+  font-size:12px;
+  opacity:0.7;
+}
+
+/* Responsive */
+@media (max-width:640px){
+  .hero{
+    justify-content:center;
+    text-align:center;
+    padding:24px;
+  }
+
+  .hero::before{
+    background: rgba(0,0,0,0.8);
+  }
+
+  .auth-options{
+    flex-direction: column;
+  }
+}
 
 
 
