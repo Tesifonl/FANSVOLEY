@@ -174,7 +174,6 @@ a:visited{ color:#1b4fa8; }               /* Color al visitar */
 /* Logo en landing */
 .logo-landing{
   display:flex;
-  flex-direction:row;
   align-items:center;
   gap:12px;
 }
@@ -213,7 +212,7 @@ a:visited{ color:#1b4fa8; }               /* Color al visitar */
 .btn-primary,
 .btn-secondary{
   border-radius:var(--radius);
-  padding:.75rem 1.25rem;
+  padding:.75rem 0.9rem;
   font-weight:700;
   text-decoration:none;
 }
@@ -223,7 +222,6 @@ a:visited{ color:#1b4fa8; }               /* Color al visitar */
   background:#fff;
   color:var(--brand);
   border:2px solid #fff;
-  min-width: 30px;
 }
 .btn-primary:hover{ background:#f5f8ff; }
 
@@ -232,7 +230,6 @@ a:visited{ color:#1b4fa8; }               /* Color al visitar */
   background:#fff;
   color:var(--brand);
   border:2px solid #fff;
-  min-width: 30px;
 }
 .btn-secondary:hover{ background:#ffffff22; }
 
@@ -313,14 +310,6 @@ a:visited{ color:#1b4fa8; }               /* Color al visitar */
   }
   .hero-content{
     width:60%;
-  }
-  .logo-landing{
-    flex-direction:column;
-    gap:2px;
-  }
-
-  .auth-options{
-    flex-direction: column;
   }
 }
 
