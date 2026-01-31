@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FANSVOLEY · Información</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Si en tus otras páginas usas .site-header, reutilízalo -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">
+        <img src="imagen/logos/LogoAzul.png" alt="Logo FANSVOLEY" class="logo-img">
+        <span class="logo-title">FANSVOLEY</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Principal">
+        <ul>
+          <li><a href="producto.html" class="is-active"><img src="imagen/iconos/Home.png" alt="Icono Home" class="icon-img"></a></li>
+          <li><a href="producto.html" class="is-active"><img src="imagen/iconos/Usuarios.png" alt="Icono Usuarios" class="icon-img"></a></li>
+          <li><a href="producto.html" class="is-active"><img src="imagen/iconos/Formulario.png" alt="Icono Formulario" class="icon-img"></a></li>
+          <li><a href="producto.html" class="is-active"><img src="imagen/iconos/Contacto.png" alt="Icono Contacto" class="icon-img"></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container info-page">
+
+    <h1 class="info-title">Sobre FANSVOLEY</h1>
+
+    <section class="info-card">
+      <h2 class="info-h2">Quiénes somos</h2>
+      <p class="info-text">
+        FANSVOLEY es un proyecto web enfocado en la comunidad del voleibol: noticias, búsqueda y recursos
+        para fans y jugadores. Nuestro objetivo es ofrecer una experiencia clara, rápida y accesible en
+        móvil y escritorio.
+      </p>
+    </section>
+
+    <section class="info-card">
+      <h2 class="info-h2">Nuestro equipo</h2>
+
+      <!-- FOTO: base normal + mitad derecha filtrada -->
+      <!-- Guarda la imagen como: imagen/equipo.jpg -->
+      <figure class="team-photo" style="--team-url: url('imagen/equipo.jpg');">
+        <img src="imagen/equipo.jpg" alt="Foto del equipo de desarrollo">
+      </figure>
+    </section>
+
+    <section class="info-grid">
+      <section class="info-card">
+        <h2 class="info-h2">Dónde estamos</h2>
+
+        <div class="embed">
+          <!-- Sustituye MAP_EMBED_URL_AQUI por el enlace de “Insertar un mapa” (Google Maps) -->
+          <iframe
+            src="https://maps.app.goo.gl/jn5nSXUkKbG4MHZL6"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen
+            title="Mapa de ubicación">
+          </iframe>
+        </div>
+
+        <p class="info-note">
+          Consejo: en Google Maps → Compartir → “Insertar un mapa” → copia el src del iframe.
+        </p>
+      </section>
+
+      <section class="info-card">
+        <h2 class="info-h2">Vídeo (con subtítulos)</h2>
+
+        <div class="embed">
+          <!-- Sustituye VIDEO_ID_AQUI por el ID del vídeo -->
+          <!-- cc_load_policy=1 activa subtítulos por defecto si el vídeo tiene subtítulos -->
+          <!-- cc_lang_pref=es fuerza preferencia de idioma -->
+          <iframe
+            src="https://youtube.com/shorts/kCNrpDdYYek?si=sPNxx4-BsP1_corH"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            title="Vídeo sobre la empresa">
+          </iframe>
+        </div>
+
+        <p class="info-note">
+          Importante: el vídeo debe tener subtítulos “reales” disponibles. YouTube permite activar subtítulos
+          por defecto con <code>cc_load_policy=1</code>. :contentReference[oaicite:1]{index=1}
+        </p>
+      </section>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-links">
+        <a href="info.html">Información</a>
+      </div>
+      <div>FANSVOLEY · Todos los derechos reservados</div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -533,3 +533,132 @@ a:visited{ color:#1b4fa8; }               /* Color al visitar */
   .sections-grid{ grid-template-columns:1fr; } /* 1 columna en móvil */
 }
 
+/* =========================
+   11. INFO PAGE
+   ========================= */
+
+.info-page{
+  padding: 22px 0 40px;
+}
+
+.info-title{
+  margin: 18px 0 14px;
+  font-size: var(--fs-xl);
+  color: var(--text);
+}
+
+.info-card{
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 16px;
+  margin: 14px 0;
+}
+
+.info-h2{
+  margin: 0 0 10px;
+  font-size: var(--fs-lg);
+  color: var(--brand);
+}
+
+.info-text{
+  margin: 0;
+  color: var(--text);
+}
+
+/* Grid (map + video) */
+.info-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* Responsive */
+@media (max-width: 900px){
+  .info-grid{
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================
+   FOTO equipo: filtro solo mitad derecha
+   ========================= */
+
+.team-photo{
+  margin: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  position: relative;
+}
+
+.team-photo img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Capa filtrada en la mitad derecha */
+.team-photo::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+
+  /* Repite la misma imagen */
+  background-image: var(--team-url);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* El filtro que quieras (ejemplo) */
+  filter: grayscale(1) contrast(1.15) saturate(1.1);
+  pointer-events: none;
+}
+
+
+/* =========================
+   Embeds responsive (map y vídeo)
+   ========================= */
+
+.embed{
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9; /* responsive sin trucos */
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: #000;
+}
+
+.embed iframe{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.info-note{
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: var(--fs-sm);
+}
+
+/* Footer links (si no lo tenías) */
+.footer-inner{
+  display: grid;
+  gap: 10px;
+}
+
+.footer-links a{
+  color: white;
+  text-decoration: none;
+}
+
+.footer-links a:hover{
+  text-decoration: underline;
+}
