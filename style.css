@@ -169,7 +169,7 @@ a:visited{ color:#1b4fa8; }               /* Color al visitar */
   display:flex;
   justify-content:center;
   align-items:center;
-  padding:20px;
+  padding:10px;
 }
 
 /* Logo en landing */
@@ -179,7 +179,7 @@ a:visited{ color:#1b4fa8; }               /* Color al visitar */
   align-items:center;
   gap:12px;
 }
-.logo-landing .logo-img{ width:100px; height:auto; }
+.logo-landing .logo-img{ width:60px; height: 60px;; }
 .logo-landing .logo-title{
   text-transform: uppercase;
   letter-spacing: .08em;
@@ -187,7 +187,7 @@ a:visited{ color:#1b4fa8; }               /* Color al visitar */
   font-size:clamp(3rem,1vw + 3rem,4rem);
 }
 
-/* Cuerpo central de la landing */
+/* 
 .landing-main{
   flex:1;
   display:flex;
@@ -202,7 +202,7 @@ a:visited{ color:#1b4fa8; }               /* Color al visitar */
   width:min(640px,92%);
   border-radius:var(--radius);
   box-shadow:var(--shadow);
-}
+}*/
 
 /* Botones de acceso */
 .auth-options{
@@ -469,13 +469,14 @@ a:visited{ color:#1b4fa8; }               /* Color al visitar */
 .hero{
   position: relative;
   min-height: 100vh;
-  width: 100%;
+  width: 90%;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
   padding: 40px;
+  border-radius: 20px;
 
   background-image: url("imagen/hero-voley-pixelado.jpg");
   background-size: cover;
@@ -510,23 +511,10 @@ a:visited{ color:#1b4fa8; }               /* Color al visitar */
 
   padding: 40px;
 
-  background: rgba(0,0,0,0.35);    /* mejora legibilidad */
-  border-radius: 20px;
-
   color: #ffffff;
   text-align: center;
 }
 
-
-.hero-title{
-  font-size: 42px;
-  margin-bottom: 10px;
-}
-
-.hero-text{
-  font-size: 18px;
-  margin-bottom: 20px;
-}
 
 .hero-credit{
   display:block;
