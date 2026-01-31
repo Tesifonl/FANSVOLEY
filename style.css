@@ -642,11 +642,6 @@ a:visited{ color:#1b4fa8; }               /* Color al visitar */
   border: 0;
 }
 
-.info-note{
-  margin: 10px 0 0;
-  color: var(--muted);
-  font-size: var(--fs-sm);
-}
 
 /* Footer links (si no lo tenías) */
 .footer-inner{
