@@ -49,7 +49,7 @@ body{
 .sr-only{ position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0; }
 .h5{ font-size:var(--fs-lg); margin:0; }
 a{ transition: color .2s ease, background-color .2s ease, transform .15s ease; }
-a:visited{ color:#93c5fd; } /* azul claro legible */
+a:visited{ color:orange; } /* azul claro legible */
 :focus-visible{ outline:3px solid #93c5fd; outline-offset:3px; }
 
 
@@ -150,7 +150,7 @@ a:visited{ color:#93c5fd; } /* azul claro legible */
    7. PÁGINA LANDING
    ============================================================ */
 .landing-body{
-  background:linear-gradient(180deg,#0d253f,#103b65);
+  background:black;
   color:#e8eefc;
   min-height:100vh;
   display:flex;
@@ -165,8 +165,9 @@ a:visited{ color:#93c5fd; } /* azul claro legible */
   letter-spacing:.08em;
   font-weight:800;
   font-size:clamp(1.6rem,1vw + 1.4rem,2.2rem);
-  color:#fff;
+  color:orange;
 }
+/*
 .landing-main{
   flex:1;
   display:flex;
@@ -181,30 +182,109 @@ a:visited{ color:#93c5fd; } /* azul claro legible */
   width:min(640px,92%);
   border-radius:var(--radius);
   box-shadow:var(--shadow);
-}
+}*/
+
 .auth-options{ display:flex; gap:12px; flex-wrap:wrap; justify-content:center; }
 .btn-primary,
 .btn-secondary{
   border-radius:var(--radius);
   padding:.75rem 1.25rem;
   font-weight:700;
-  text-decoration:none;
+  color:orange;
 }
-/* Botón claro sobre fondo oscuro */
+/* Botón claro sobre fondo oscuro 
 .btn-primary{
   background:#e8f1ff;
   color:#0b2547;
   border:2px solid #e8f1ff;
 }
-.btn-primary:hover{ background:#dbeafe; }
+.btn-primary:hover{ background:#dbeafe; }*/
+
 /* Botón transparente */
+.btn-primary,
 .btn-secondary{
   background:transparent;
-  color:#eaf2ff;
-  border:2px solid #b6d2ff;
+  color:orange;
+  border:2px solid orange;
 }
+.btn-primary,
 .btn-secondary:hover{ background:#ffffff1a; }
 .landing-footer{ text-align:center; padding:14px; font-size:var(--fs-sm); opacity:.8; }
+
+
+/* =========================
+   Incorporo imagen del HERO – Landing con desvanecimiento a negro a la izquierda
+   ========================= */
+
+.hero{
+  position: relative;
+  height: 80vh;
+  width: 90%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px;
+  border-radius: 20px;
+
+  background-image: url("imagen/hero-voley-pixelado.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  overflow: hidden;
+}
+
+/* Desvanecimiento a negro (CSS puro) */
+.hero::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0,0,0,0.9) 0%,
+    rgba(0,0,0,0.55) 45%,
+    rgba(0,0,0,0.0) 75%
+  );
+  pointer-events: none;
+}
+
+/* =========================
+   Contenido del hero
+   ========================= */
+
+.hero-content{
+  position: relative;              /* para quedar sobre el degradado */
+  max-width: 720px;
+  width: 100%;
+
+  padding: 40px;
+
+  color: #ffffff;
+  text-align: center;
+}
+
+
+.hero-credit{
+  display:block;
+  margin-top:16px;
+  font-size:12px;
+  opacity:0.7;
+}
+
+/* Responsive */
+@media (max-width:640px){
+  .hero{
+    justify-content:center;
+    text-align:center;
+  }
+  .hero-content{
+    width:60%;
+  }
+}
+
+
 
 
 /* ============================================================
@@ -367,10 +447,128 @@ a:visited{ color:#93c5fd; } /* azul claro legible */
   .sections-grid{ grid-template-columns:1fr; }
 }
 
+/* =========================
+   11. INFO PAGE
+   ========================= */
 
-/* ============================================================
-   11. Accesibilidad: sin animaciones si el usuario lo solicita
-   ============================================================ */
-@media (prefers-reduced-motion:reduce){
-  *{ animation:none!important; transition:none!important; }
+.info-page{
+  padding: 22px 0 40px;
 }
+
+.info-title{
+  margin: 18px 0 14px;
+  font-size: var(--fs-xl);
+  color: var(--text);
+}
+
+.info-card{
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 16px;
+  margin: 14px 0;
+}
+
+.info-h2{
+  margin: 0 0 10px;
+  font-size: var(--fs-lg);
+  color: var(--brand);
+}
+
+.info-text{
+  margin: 0;
+  color: var(--text);
+}
+
+/* Grid (map + video) */
+.info-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* Responsive */
+@media (max-width: 900px){
+  .info-grid{
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================
+   FOTO equipo: filtro solo mitad derecha
+   ========================= */
+
+.team-photo{
+  margin: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  position: relative;
+}
+
+.team-photo img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Capa filtrada en la mitad derecha */
+.team-photo::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+
+  /* Repite la misma imagen */
+  background-image: var(--team-url);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* El filtro que quieras (ejemplo) */
+  filter: grayscale(1) contrast(1.15) saturate(1.1);
+  pointer-events: none;
+}
+
+
+/* =========================
+   Embeds responsive (map y vídeo)
+   ========================= */
+
+.embed{
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9; /* responsive sin trucos */
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: #000;
+}
+
+.embed iframe{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+
+/* Footer links (si no lo tenías) */
+.footer-inner{
+  display: grid;
+  gap: 10px;
+}
+
+.footer-links a{
+  color: white;
+  text-decoration: none;
+}
+
+.footer-links a:hover{
+  text-decoration: underline;
+}
+
