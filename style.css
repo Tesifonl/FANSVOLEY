@@ -312,6 +312,10 @@ a:visited{ color:#1b4fa8; }               /* Color al visitar */
   .hero-content{
     width:60%;
   }
+  .logo-landing{
+    flex-direction:column;
+    gap:2px;
+  }
 
   .auth-options{
     flex-direction: column;
