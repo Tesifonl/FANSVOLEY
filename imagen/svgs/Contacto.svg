@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="793.70081"
+   height="1122.5197"
+   viewBox="0 0 210 296.99999"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.2 (ebf0e940, 2025-05-08)"
+   sodipodi:docname="Contacto.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     inkscape:zoom="0.71268238"
+     inkscape:cx="310.79764"
+     inkscape:cy="491.10236"
+     inkscape:window-width="1160"
+     inkscape:window-height="847"
+     inkscape:window-x="2038"
+     inkscape:window-y="34"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <inkscape:path-effect
+       effect="fillet_chamfer"
+       id="path-effect6"
+       is_visible="true"
+       lpeversion="1"
+       nodesatellites_param="F,0,0,1,0,0,0,1 @ F,0,0,1,0,3.979289,0,1 @ F,0,0,1,0,2.136274,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,2.136274,0,1"
+       radius="0"
+       unit="px"
+       method="auto"
+       mode="F"
+       chamfer_steps="1"
+       flexible="false"
+       use_knot_distance="true"
+       apply_no_radius="true"
+       apply_with_radius="true"
+       only_selected="false"
+       hide_knots="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect5"
+       is_visible="true"
+       lpeversion="1.3"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false"
+       uniform="false" />
+    <inkscape:path-effect
+       effect="fillet_chamfer"
+       id="path-effect4"
+       is_visible="true"
+       lpeversion="1"
+       nodesatellites_param="F,0,0,1,0,9.5786213,0,1 @ F,0,0,1,0,10.874275,0,1 @ F,0,0,1,0,6.9760741,0,1 @ F,0,0,1,0,7.9015536,0,1 @ F,0,0,1,0,3.9253078,0,1 @ F,0,0,1,0,3.1097097,0,1 @ F,0,0,1,0,4.6155027,0,1 @ F,0,0,1,0,4.1148662,0,1"
+       radius="0"
+       unit="px"
+       method="auto"
+       mode="F"
+       chamfer_steps="1"
+       flexible="false"
+       use_knot_distance="true"
+       apply_no_radius="true"
+       apply_with_radius="true"
+       only_selected="false"
+       hide_knots="false" />
+    <inkscape:path-effect
+       effect="fillet_chamfer"
+       id="path-effect3"
+       is_visible="true"
+       lpeversion="1"
+       nodesatellites_param="F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,2.779971,0,1 @ F,0,1,1,0,2.779971,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1"
+       radius="0"
+       unit="px"
+       method="auto"
+       mode="F"
+       chamfer_steps="1"
+       flexible="false"
+       use_knot_distance="true"
+       apply_no_radius="true"
+       apply_with_radius="true"
+       only_selected="false"
+       hide_knots="false" />
+  </defs>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:#ffffff;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.665001"
+       d="M 82.417498,86.129999 Z"
+       id="path2" />
+    <path
+       style="fill:#fdfaff;fill-opacity:0.97222221;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.665001"
+       d="m 43.064998,88.3575 16.064493,19.91997 a 3.7232837,3.7232837 4.2118997 0 0 5.422837,0.39936 l 2.550536,-2.35288 a 2.3294524,2.3294524 94.785256 0 0 0.262685,-3.13792 l -3.423238,-4.423119 -4.697529,3.033039 -7.583482,-9.637343 4.284935,-4.114252 -5.581137,-5.607693 -6.372103,4.493402 A 0.93436321,0.93436321 123.02847 0 0 43.064998,88.3575 Z"
+       id="path5"
+       inkscape:path-effect="#path-effect6"
+       inkscape:original-d="M 43.064998,88.3575 61.6275,111.375 68.673053,104.87544 63.942311,98.762911 59.244782,101.79595 51.6613,92.158607 55.946235,88.044355 50.365098,82.436662 42.24714,88.161184 Z"
+       sodipodi:nodetypes="cccccccccc"
+       inkscape:export-filename="Conctaco.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+  </g>
+</svg>
