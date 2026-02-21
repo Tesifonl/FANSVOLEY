@@ -313,7 +313,38 @@ a:visited{ color:#1b4fa8; }               /* Color al visitar */
   }
 }
 
+/* 3) Borde animado alrededor del HERO (sin tocar la imagen) */
 
+.hero::after{
+  content:"";
+  position:absolute;
+  inset: -3px;                 /* grosor del borde */
+  border-radius: 22px;         /* acorde al hero */
+  background: conic-gradient(
+    from 0deg,
+    #ffffff22,
+    var(--brand),
+    #ffffff22,
+    var(--brand-2),
+    #ffffff22
+  );
+  z-index: 0;
+  filter: blur(0.2px);
+  animation: border-spin 4.5s linear infinite;
+}
+
+/* Para que el contenido real quede encima */
+.hero::before{ z-index: 1; }   /* degradado */
+.hero-content{ z-index: 2; position: relative; }
+
+/* “Hueco” interior para que parezca borde y no tape la imagen */
+.hero{
+  background-clip: padding-box;
+}
+
+@keyframes border-spin{
+  to{ transform: rotate(1turn); }
+}
 
 /* ============================================================
    8. PÁGINA PRODUCTO
@@ -365,12 +396,29 @@ a:visited{ color:#1b4fa8; }               /* Color al visitar */
   text-decoration:none;
   aspect-ratio:16/9;
   min-height:160px;
+  will-change: transform;
+  transition: transform var(--t-med) var(--ease-out),
+              box-shadow var(--t-med) var(--ease-out),
+              border-color var(--t-med) var(--ease-out),
+              filter var(--t-med) var(--ease-out);
 }
+/* Hover */
 .section-card:hover{
   transform:translateY(-2px);
   border-color:#bcd6ff;
   transition:.2s ease;
+  transform: translateY(-3px) scale(1.02);
+  filter: saturate(1.05);
 }
+
+/* Teclado: cuando el <a> recibe focus */
+.section-card:focus-visible{
+  outline: none;
+  box-shadow: var(--shadow), var(--ring);
+  transform: translateY(-3px) scale(1.02);
+  border-color:#bcd6ff;
+}
+
 .section-img{
   position:absolute; inset:0;
   width:100%; height:100%;
@@ -656,4 +704,96 @@ a:visited{ color:#1b4fa8; }               /* Color al visitar */
 
 .footer-links a:hover{
   text-decoration: underline;
+}
+
+
+/* ============================================================
+   ANIMACIONES CSS – FANSVOLEY
+   ============================================================ */
+:root{
+  --ease-out:cubic-bezier(.2,.8,.2,1);
+  --ease-smooth:cubic-bezier(.22,.61,.36,1);
+
+  --t-fast:160ms;
+  --t-med:260ms;
+  --t-slow:900ms;
+
+  --ring: 0 0 0 3px #8fbaff; /* similar a tu focus */
+}
+
+/* Accesibilidad: reducir movimiento */
+@media (prefers-reduced-motion: reduce){
+  *,
+  *::before,
+  *::after{
+    animation-duration:0.001ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:0.001ms !important;
+    scroll-behavior:auto !important;
+  }
+}
+
+/* 2) Separador animado infinito (mueve + cambia color) */
+.animated-separator{
+  position: relative;
+  height: 10px;
+  width: 100%;
+  border-radius: 999px;
+  overflow: hidden;
+  background: #ffffff22;
+  border: 1px solid #ffffff33;
+}
+
+.animated-separator::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  width: 30%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--brand), var(--brand-2));
+  animation: sep-move 2.2s linear infinite,
+             sep-color 3.2s var(--ease-smooth) infinite;
+}
+
+@keyframes sep-move{
+  0%{ transform: translateX(-40%); }
+  100%{ transform: translateX(380%); }
+}
+
+@keyframes sep-color{
+  0%{ filter: hue-rotate(0deg); }
+  100%{ filter: hue-rotate(110deg); }
+}
+
+
+/* 5) Scroll reveal (más visible) */
+
+.reveal{
+  opacity: 0;
+  transform: translateY(40px) scale(0.97);
+  filter: blur(6px);
+  transition:
+    opacity 900ms ease,
+    transform 900ms cubic-bezier(.2,.8,.2,1),
+    filter 900ms ease;
+  will-change: opacity, transform, filter;
+}
+
+.reveal.in-view{
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+}
+
+/* 7) Wiggle en iconos nav al hover/focus */
+.main-nav a:hover .icon-img,
+.main-nav a:focus-visible .icon-img{
+  animation: wiggle 420ms var(--ease-out) 1;
+}
+
+@keyframes wiggle{
+  0%{ transform: rotate(0deg) translateY(0); }
+  35%{ transform: rotate(-6deg) translateY(-1px); }
+  70%{ transform: rotate(6deg) translateY(-1px); }
+  100%{ transform: rotate(0deg) translateY(0); }
 }

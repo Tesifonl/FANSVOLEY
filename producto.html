@@ -6,76 +6,85 @@
   <title>FANSVOLEY · Inicio</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
+  <!-- HEADER -->
   <header class="site-header">
     <div class="container header-inner">
       <a class="logo" href="index.html">
         <img src="imagen/logos/LogoAzul.png" alt="Logo FANSVOLEY" class="logo-img">
         <span class="logo-title">FANSVOLEY</span>
       </a>
+
       <button class="nav-toggle" aria-controls="mainnav" aria-expanded="false">
         <span class="sr-only">Abrir menú</span> ☰
       </button>
+
       <nav id="mainnav" class="main-nav" aria-label="Principal">
         <ul>
-          <li><a href="producto.html" class="is-active"><img src="imagen/iconos/Home.png" alt="Icono Home" class="icon-img"></a></li>
-          <li><a href="index.html" class="is-active"><img src="imagen/iconos/Usuarios.png" alt="Icono Usuarios" class="icon-img"></a></li>
-          <li><a href="buscador.html" class="is-active"><img src="imagen/iconos/Formulario.png" alt="Icono Formulario" class="icon-img"></a></li>
-          <li><a href="info.html" class="is-active"><img src="imagen/iconos/Contacto.png" alt="Icono Contacto" class="icon-img"></a></li>
+          <li><a href="producto.html"><img src="imagen/iconos/Home.png" alt="Inicio" class="icon-img"></a></li>
+          <li><a href="index.html"><img src="imagen/iconos/Usuarios.png" alt="Usuarios" class="icon-img"></a></li>
+          <li><a href="buscador.html"><img src="imagen/iconos/Formulario.png" alt="Buscador" class="icon-img"></a></li>
+          <li><a href="info.html"><img src="imagen/iconos/Contacto.png" alt="Información" class="icon-img"></a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  
+  <!-- SEPARADOR ANIMADO -->
+  <div class="animated-separator" aria-hidden="true"></div>
+
+  <!-- MAIN -->
   <main class="container main-stack" role="main">
-    <!-- Seccion principal -->
-    <section class="col-grid">
+
+    <!-- SECCIONES -->
+    <section class="col-grid reveal">
       <header class="card-header head-gap">
         <h2 class="h5">SECCIONES</h2>
       </header>
-      
 
       <div class="sections-grid" aria-label="Secciones principales">
-        <a class="section-card" href="imagen/productos/resultados_grande.png" target="_blank" rel="noopener" data-section="resultados">
-          <img class="section-img" src="imagen/productos/resultados_pequeno.png" alt="Marcadores y resultados recientes" width="1280" height="720" loading="lazy" decoding="async">
+
+        <a class="section-card" href="imagen/productos/resultados_grande.png" target="_blank" rel="noopener">
+          <img class="section-img" src="imagen/productos/resultados_pequeno.png" alt="Resultados" loading="lazy">
           <span class="section-title">RESULTADOS</span>
         </a>
 
-
-        <a class="section-card" href="imagen/productos/clasificacion_grande.png" target="_blank" rel="noopener"data-section="clasificacion">
-          <img class="section-img" src="imagen/productos/clasificacion_pequeno.png" alt="Tabla de posiciones por competición" width="1280" height="720" loading="lazy" decoding="async">
+        <a class="section-card" href="imagen/productos/clasificacion_grande.png" target="_blank" rel="noopener">
+          <img class="section-img" src="imagen/productos/clasificacion_pequeno.png" alt="Clasificación" loading="lazy">
           <span class="section-title">CLASIFICACIÓN</span>
         </a>
 
-        <a class="section-card" href="imagen/productos/equipos_grande.png" target="_blank" rel="noopener" data-section="equipos">
-          <img class="section-img" src="imagen/productos/equipos_pequeno.png"alt="Plantillas y datos de equipos" width="1280" height="720" loading="lazy" decoding="async">
+        <a class="section-card" href="imagen/productos/equipos_grande.png" target="_blank" rel="noopener">
+          <img class="section-img" src="imagen/productos/equipos_pequeno.png" alt="Equipos" loading="lazy">
           <span class="section-title">EQUIPOS</span>
         </a>
 
-        <a class="section-card" href="imagen/productos/arbitros_grande.png" target="_blank" rel="noopener"data-section="arbitros">
-          <img class="section-img" src="imagen/productos/arbitros_pequeno.png" alt="Árbitros y designaciones" width="1280" height="720" loading="lazy" decoding="async">
+        <a class="section-card" href="imagen/productos/arbitros_grande.png" target="_blank" rel="noopener">
+          <img class="section-img" src="imagen/productos/arbitros_pequeno.png" alt="Árbitros" loading="lazy">
           <span class="section-title">ÁRBITROS</span>
         </a>
 
-        <a class="section-card" href="imagen/productos/competiciones_grande.png" target="_blank" rel="noopener" data-section="competiciones">
-          <img class="section-img" src="imagen/productos/competiciones_pequeno.png" alt="Competiciones y fases" width="1280" height="720" loading="lazy" decoding="async">
+        <a class="section-card" href="imagen/productos/competiciones_grande.png" target="_blank" rel="noopener">
+          <img class="section-img" src="imagen/productos/competiciones_pequeno.png" alt="Competiciones" loading="lazy">
           <span class="section-title">COMPETICIONES</span>
         </a>
 
-        <a class="section-card" href="imagen/productos/clubes_grande.png" target="_blank" rel="noopener" data-section="clubes">
-          <img class="section-img" src="imagen/productos/clubes_pequeno.png" alt="Información de clubes" width="1280" height="720" loading="lazy" decoding="async">
+        <a class="section-card" href="imagen/productos/clubes_grande.png" target="_blank" rel="noopener">
+          <img class="section-img" src="imagen/productos/clubes_pequeno.png" alt="Clubes" loading="lazy">
           <span class="section-title">CLUBES</span>
         </a>
+
       </div>
     </section>
 
-    <!-- Noticias -->
-    <section class="card" aria-labelledby="noticias-title">
+    <!-- NOTICIAS -->
+    <section class="card reveal" aria-labelledby="noticias-title">
       <header class="card-header">
         <h2 id="noticias-title" class="h5">NOTICIAS</h2>
       </header>
+
       <ul class="news-list">
         <li>
           <a href="buscador.html">
@@ -96,32 +105,57 @@
           </a>
         </li>
       </ul>
-      <a class="link-more" href="#">Ver todas &rarr;</a>
+
+      <a class="link-more" href="#">Ver todas →</a>
     </section>
 
-    <!-- Publicidad  -->
-    <section class="card" aria-labelledby="publi-title">
+    <!-- PUBLICIDAD -->
+    <section class="card reveal" aria-labelledby="publi-title">
       <header class="card-header">
-        <h2 id="publi-title" class="h5">PUBLICIDAD</h2>
+        <h2 id="publi-title" class="h5">ÚLTIMA HORA DE PARTIDOS</h2>
       </header>
+
       <div class="ads single">
-        <a class="ad-box" href="#" aria-label="Publicidad 300x250">
-          <img class="ad-img" src="imagen/otros/banner_300x250.png" alt="Publicidad 300x250" width="300" height="250" loading="lazy" decoding="async">
-        </a>
+        <iframe 
+          src="banner5/index.html"
+          width="300" 
+          height="250"
+          loading="lazy"
+          style="border:0;">
+        </iframe>
       </div>
     </section>
+
   </main>
 
+  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container">
-        <div class="footer-links">
-          <a href="info.html">Información</a>
-        </div>
-       <span id="year"></span> FANSVOLEY · Todos los derechos reservados
+      <div class="footer-links">
+        <a href="info.html">Información</a>
+      </div>
+      <span>FANSVOLEY · Todos los derechos reservados</span>
     </div>
-
   </footer>
+
+  <!-- JS ANIMACIÓN SCROLL -->
+  <script>
+  (function(){
+    const els = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window) || !els.length) return;
+
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          e.target.classList.add('in-view');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    els.forEach(el=>io.observe(el));
+  })();
+  </script>
 
 </body>
 </html>
-
