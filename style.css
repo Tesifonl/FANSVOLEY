@@ -74,29 +74,120 @@ a:visited{ color:#1b4fa8; }               /* Color al visitar */
   padding:14px 0;
 }
 .logo{
-  display:flex; align-items:center; gap:10px;
-  color:#fff; text-decoration:none;
+  display:flex; 
+  align-items:center; 
+  gap:10px;
+  color:#fff; 
+  text-decoration:none;
 }
+
+/* Lo sustityo por logo-svg
 .logo-img{ 
   width:40px; 
   height:auto; 
-}
-.icon-img{ 
-  width:20px;
-   height:auto; 
-  }
+}*/
 
-/* Estilo del texto del logo (sustituye a Bebas Neue) */
+/* Lo sustituyo por logo-svg
 .logo-title{
-  font-family: inherit;           /* Usa la misma fuente del sistema */
-  text-transform: uppercase;      /* Mayúsculas */
-  letter-spacing: .08em;          /* Espaciado tipo “display” */
-  font-weight: 800;               /* Más grosor para destacar */
+  font-family: inherit;          
+  text-transform: uppercase;      
+  letter-spacing: .08em;         
+  font-weight: 800;               
   font-size:clamp(1.4rem,.8vw + 1.2rem,2rem);
   line-height:1;
   color:white;
   white-space:nowrap;
+}*/
+
+
+
+.logo-svg{
+  display:block;
+  width: auto; 
+  max-width: 240px;    
+  height: 50px;
+  overflow: visible;
 }
+
+
+/* Evita que partes del SVG "capturen" el click */
+.logo-svg *{ pointer-events:none; }
+
+/* Responsive del muevo logo*/
+@media (max-width:900px){
+  .logo-svg{ height:34px; }
+}
+
+@media (max-width:640px){
+  .logo-svg{ height:30px; max-width:180px; }
+}
+/*
+/* --- LOGO SVG: base --- 
+.logo-svg{
+  height: 40px;   
+  width: auto;
+  display: block;
+}
+
+// Muy importante: permitir que los transforms funcionen bien en SVG 
+.logo-svg .logo-ball,
+.logo-svg .logo-text{
+  transform-box: fill-box;
+  transform-origin: center;
+  will-change: transform;
+}
+
+// ===== FASE 1: al cargar (movimiento suave del balón) ===== 
+// Aplica solo cuando el SVG aparece/carga 
+.logo-svg .logo-ball{
+  animation: logoFloat 900ms ease-out 1;
+}
+
+@keyframes logoFloat{
+  0%   { transform: translateY(6px) scale(0.98); opacity: 0.0; }
+  60%  { transform: translateY(-2px) scale(1.03); opacity: 1.0; }
+  100% { transform: translateY(0) scale(1); }
+}
+
+// ===== FASE 2: al pasar el ratón (hover) ===== 
+// Hover sobre el enlace del logo, animamos una segunda cosa 
+.logo:hover .logo-ball{
+  transform: rotate(-10deg) scale(1.05);
+  transition: transform 250ms ease;
+}
+
+.logo:hover .logo-text{
+  transform: translateX(4px);
+  transition: transform 250ms ease;
+}
+
+// También para teclado (accesibilidad): 
+.logo:focus-visible .logo-ball{
+  transform: rotate(-10deg) scale(1.05);
+}
+.logo:focus-visible .logo-text{
+  transform: translateX(4px);
+}
+
+// Accesibilidad: reducir movimiento 
+@media (prefers-reduced-motion: reduce){
+  .logo-svg .logo-ball{ animation: none; }
+  .logo:hover .logo-ball,
+  .logo:hover .logo-text,
+  .logo:focus-visible .logo-ball,
+  .logo:focus-visible .logo-text{
+    transition: none;
+    transform: none;
+  }
+}
+
+*/
+
+
+.icon-img{ 
+  width:20px;
+   height:auto; 
+  }
 
 /* Botón para menú móvil */
 .nav-toggle{
