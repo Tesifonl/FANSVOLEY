@@ -886,3 +886,14 @@ a:visited{ color:#1b4fa8; }               /* Color al visitar */
   70%{ transform: rotate(6deg) translateY(-1px); }
   100%{ transform: rotate(0deg) translateY(0); }
 }
+
+/*-- CHART--*/
+.stats-grid{ display:grid; gap:16px; }
+@media (min-width: 900px){ .stats-grid{ grid-template-columns: 2fr 1fr; } }
+
+.chart-wrap{
+  border-radius:16px;
+  padding:12px;
+  height:280px;
+}
+.chart-wrap canvas{ width:100% !important; height:100% !important; }

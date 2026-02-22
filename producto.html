@@ -7,6 +7,10 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
+   <!-- LIBBRERIA CHART -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"> </script>
+
+
 <body>
 
   <!-- HEADER -->
@@ -201,6 +205,33 @@
       <a class="link-more" href="#">Ver todas →</a>
     </section>
 
+    <!-- CHART -->
+
+    <section class="card" aria-labelledby="stats-title">
+      <header class="card-header">
+          <h2 id="stats-title" class="h5">ESTADÍSTICAS · Partidos por mes</h2>
+       </header>
+      <div class="stats-grid">
+        <div class="chart-wrap">
+        <canvas id="fansChart"></canvas>
+      </div>
+   
+      <div class="stats-controls">
+        <label class="control">
+        Temporada
+        <select id="seasonSelect">
+          <option value="2023">2023/24</option>
+          <option value="2024" selected>2024/25</option>
+          <option value="2025">2025/26</option>
+        </select>
+      </label>
+      <button type="button" class="btn pulse" id="randomBtn">Aleatorizar datos</button>
+      <button type="button" class="btn" id="resetBtn">Restablecer</button>
+    </div>
+  </div>
+</section>
+
+
     <!-- PUBLICIDAD -->
     <section class="card reveal" aria-labelledby="publi-title">
       <header class="card-header">
@@ -247,6 +278,26 @@
 
     els.forEach(el=>io.observe(el));
   })();
+  </script>
+
+
+
+   <!-- LIBBRERIA CHART -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const ctx = document.getElementById('fansChart');
+
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: ['Sep', 'Oct', 'Nov', 'Dic'],
+          datasets: [{
+            label: 'Partidos',
+            data: [5, 8, 6, 9]
+          }]
+        }
+      });
+    });
   </script>
 
 </body>
